@@ -4,14 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const programs = [
   {
-    icon: BookOpen,
-    title: "GFSRD Academy",
-    description:
-      "Comprehensive training programs in sustainable agriculture, rural entrepreneurship, and community development.",
-    color: "primary",
-    link: "#academy",
-  },
-  {
     icon: Globe,
     title: "Global Initiatives",
     description:

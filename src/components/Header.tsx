@@ -15,15 +15,7 @@ const navItems = [
   { name: "Home", href: "#" },
   { name: "Academy", href: "/academy", isRoute: true },
   { name: "Resources", href: "#resources" },
-  {
-    name: "Programs",
-    href: "#programs",
-    children: [
-      { name: "GFSRD Global", href: "#global" },
-      { name: "Regional Initiatives", href: "#regional" },
-      { name: "SDG Localization", href: "#sdg" },
-    ],
-  },
+  { name: "Media Coverage", href: "/media-coverage"},
   { name: "Events", href: "#events" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
@@ -88,41 +80,18 @@ export function Header() {
             <NavigationMenu>
               <NavigationMenuList className="gap-1">
                 {navItems.map((item) =>
-                  item.children ? (
-                    <NavigationMenuItem key={item.name}>
-                      <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-[oklch(76.8%_0.233_130.85)] hover:text-primary">
-                        {item.name}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-48 gap-1 p-2">
-                          {item.children.map((child) => (
-                            <li key={child.name}>
-                              <NavigationMenuLink asChild>
-                                <a
-                                  href={child.href}
-                                  className="block px-4 py-2 text-m rounded-md hover:bg-secondary transition-colors"
-                                >
-                                  {child.name}
-                                </a>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  ) : (
                     <NavigationMenuItem key={item.name}>
                       <NavigationMenuLink asChild>
                         <a
                           href={item.href}
-                          className="px-4 py-2 text-m font-medium text-[oklch(76.8%_0.233_130.85)] hover:text-primary transition-colors"
+                          className="px-4 py-2 text-m font-medium text-[oklch(76.8%_0.233_130.85)] hover:text-white transition-colors"
                         >
                           {item.name}
                         </a>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   )
-                )}
+                }
               </NavigationMenuList>
             </NavigationMenu>
           </nav>
