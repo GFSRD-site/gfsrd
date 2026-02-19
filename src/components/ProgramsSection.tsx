@@ -1,15 +1,24 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { BookOpen, Globe, Lightbulb, Users, ArrowUpRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const programs = [
+  {
+    icon: BookOpen,
+    title: "GFSRD Academy",
+    description:
+      "Comprehensive training programs in sustainable agriculture, rural entrepreneurship, and community development.",
+    color: "primary",
+    link: "/academy",
+  },
   {
     icon: Globe,
     title: "Global Initiatives",
     description:
       "International partnerships fostering knowledge exchange and collaborative projects across continents.",
     color: "accent",
-    link: "#global",
+    link: "/global",
   },
   {
     icon: Lightbulb,
@@ -17,7 +26,7 @@ const programs = [
     description:
       "Bringing UN Sustainable Development Goals to life at the grassroots level in rural communities.",
     color: "primary",
-    link: "#sdg",
+    link: "/sdg",
   },
   {
     icon: Users,
@@ -25,7 +34,7 @@ const programs = [
     description:
       "Building strong connections between farmers, researchers, and policymakers worldwide.",
     color: "accent",
-    link: "#networks",
+    link: "/networks",
   },
 ];
 
@@ -43,7 +52,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -81,28 +90,30 @@ export function ProgramsSection() {
         >
           {programs.map((program, index) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card className="group h-full bg-card hover:shadow-elevated transition-all duration-300 border-border/50 overflow-hidden cursor-pointer">
-                <CardHeader className="pb-4">
-                  <div
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${
-                      program.color === "accent"
-                        ? "bg-accent/10 text-accent"
-                        : "bg-primary/10 text-primary"
-                    }`}
-                  >
-                    <program.icon className="w-7 h-7" />
-                  </div>
-                  <CardTitle className="font-display text-xl flex items-center justify-between">
-                    {program.title}
-                    <ArrowUpRight className="w-5 h-5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all text-muted-foreground" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {program.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <Link to={program.link} className="block h-full group no-underline">
+                <Card className="h-full bg-card hover:shadow-xl transition-all duration-300 border-border/50 overflow-hidden cursor-pointer active:scale-[0.98]">
+                  <CardHeader className="pb-4">
+                    <div
+                      className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${
+                        program.color === "accent"
+                          ? "bg-accent/10 text-accent"
+                          : "bg-primary/10 text-primary"
+                      }`}
+                    >
+                      <program.icon className="w-7 h-7" />
+                    </div>
+                    <CardTitle className="font-display text-xl flex items-center justify-between">
+                      {program.title}
+                      <ArrowUpRight className="w-5 h-5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all text-muted-foreground" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {program.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

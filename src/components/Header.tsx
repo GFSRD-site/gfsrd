@@ -12,9 +12,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import logo from "@/assets/gfsrd-logo.png";
 const navItems = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "/" },
   { name: "Academy", href: "/academy", isRoute: true },
-  { name: "Resources", href: "#resources" },
   { name: "Media Coverage", href: "/media-coverage"},
   { name: "Events", href: "#events" },
   { name: "About", href: "#about" },

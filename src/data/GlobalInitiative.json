@@ -1,0 +1,78 @@
+{
+  "continents": [
+    {
+      "id": "asia",
+      "name": "Asia",
+      "head": {
+        "id": "maria-christina",
+        "name": "Maria Christina Endarwati",
+        "country": "Indonesia",
+        "role": "Co-Founder & Head, GFSRD-Asia",
+        "bio": "Maria Christina Endarwati is one of the professional planners in Indonesia, starting her career in the world of urban and regional planning since 1998 to form a sharp analysis in the field of urban and regional planning. Studying at the National Institute of Technology Malang under the direction of experienced lecturers in the world of planners made her a reliable planner, so in 2000 she decided to take a master’s degree to deepen her knowledge of regional and urban planning at RMIT Australia. After returning to study from Australia, he immediately devoted himself to his beloved campus, Institut Teknologi Nasional Malang. Over time with the achievements made Maria Christina Endarwati was appointed as a Civil Servant by the Batu City government to become the personal secretary of the mayor of Batu. Feeling that it was enough to devote herself to Batu City in the following year decided to resign and refocus on the world of spatial planning in Indonesia and became a permanent lecturer at the National Institute of Technology Malang. Over time with a myriad of experiences as a planner practitioner lecturer in Indonesia led him to become one of the assessors for the Indonesian Planner Expert Association. In addition, he is a member of the Indonesian Planner School Association and is often a speaker at events organized by GFRSD (Global Forum For Sustainability Rural Development). Returning to the world of education, she continued her doctoral program at the faculty of environmental science at Brawaijaya University with a focus on the world of hatred and received her doctorate in 2022 cum laude. And most recently Maria Christina joined the National Capital City development project.",
+        "phone": "",
+        "email": "asia@gfsrd.net",
+        "image": "/maria-300x300.jpeg",
+        "office": {
+          "name": "Asia Office",
+          "address": "Musi 23A, Malang 65123, East Java-Indonesia"
+        }
+      },
+      "members": [
+        { "id": "sary-tatpaporn", "name": "SARY Tatpaporn", "role": "Country Director", "country": "Laos", "bio": "President/CEO", "phone": "510-274-0958", "email": "ablecommunitydf@gmail.com", "image": "/SARY.jpg" ,"img":"/SARY_.jpg" },
+        { "id": "gulsun-kurubacak", "name": "Dr. Gülsün Kurubacak Çakir", "role": "Country Director", "country": "Türkiye", "bio": "Dr. Gulsun Kurubacak Cakir received her first undergraduate degree (B.A.) from Ankara University, College of Educational Sciences, Department of Educational Administration and Planning in 1985; she completed her master’s degree (M.A.) in 1987 from Anadolu University Social Sciences Institute Educational Technologies Department and earned her doctorate (Ed.D.) in 2000 from Cincinnati University Teachers College, Department of Curriculum and Instruction. Dr. Kurubacak Cakir was a postdoctoral researcher in Distance Education at the University of New Mexico between 2001 and 2002.Dr. Kurubacak Cakir received her B.S. degree from the Computer Engineering Department of the International Turkish-Kazakhstan University, Faculty of Information Technologies and Engineering in 2013. Dr. Kurubacak Cakir is an Istanbul University College of Open Education Justice Associate Degree Program student.   Dr. Kurubacak Cakir has thirty-five-year experience in open and distance learning systems. She is one of the distance education faculty members of Anadolu University College of Open Education, Department of Distance Education.             Dr. Kurubacak Cakir is also an adjunct professor both at the Faculty of Engineering at Jamia Hamdard University, New Delhi, India, and at the B.A. in Electrical Engineering Education Program, Department of Electrical Engineering, Faculty of Engineering, Universitas Negeri Malang, Malang, Indonesia. Dr. Kurubacak Cakir is the R&D and International Relations Group Coordinator and also she is the Quality Group Coordinator between January 2020-March 2020 at the Anadolu University Open Education System. Dr. Kurubacak Cakir is the founder and chief editor of ETF (Educational Technology Foresight – http://journalpps.um.ac.id/index.php/css/index), AUAd (Journal of Open Education Research and Practice – http://auad.anadolu.edu.tr) since 2015; she is also the assistant editor of TOJDE (Turkish Journal of Online Distance Education – http://tojde.anadolu.edu.tr). Dr. Kurubacak Cakir is a founding Open Education Programs Accreditation and Distance Education Association (AUDAK) member. She was also the chairwoman of AUDAK between 2017-2021Dr. Kurubacak Cakir is also the founder of the @zamninotesineyolculuk (@journeybeyondtime), @uzaktanegitimkocu (@distanceeducarioncoach), @kelebekketkisikocu (@butterflyeffect), and @nitel_okuryazar (@qualitattive_literacy) movements, which broadcasting live programs on the Instagram addresses.   Dr. Gulsun Kurubacak Cakir has received numerous awards for her research interest, including, in 2021, the Gold Ambassador Award and the Club for Leaders, a European Project. She has several publications and projects in open and distance learning. Her research interests include quantitative, qualitative, and mixed research; the design and implementation of an open and learning environment with a transhumanist culture; project-based learning and evaluation; and universal design principles and new technologies (BlockchainTechnologies, Learning Technologies, Foresight, Vision Design, Mobile Technologies, Virtual Reality, Augmented Reality, Mixed Reality, Immersive Learning, Metaverse, Transhumanism).", "phone": "5352065464", "email": "dr.dr.gulsun@gmail.com", "image": "/GULSUN.jpg","img":"/GULSUN_.jpg" },
+        { "id": "tolonbek", "name": "Tolonbek", "role": "Country Director", "country": "Kyrgyz Republic", "bio": "Doctor of Economic Sciences, Professor", "phone": "9.9656E+11", "email": "abdyrov@gmail.com", "image": "/Tolonbek.jpg" ,"img":"/Tolonbek_.jpg" },
+        { "id": "hazhar-bibas", "name": "Asst. Prof. Dr. Hazhar Bibas", "role": "Country Director", "country": "Iraq", "bio": "Hazhar Blbas is a lecturer in Statistics Department in College of Administration and Economics at Salahaddin University Erbil. He gained master degree scholarship in Applied Statistics at University of Central Florida in the United States of America in 2014 and he gained a PhD candidate in the same filed at Salahaddin University on October 2022. Finally, he is an Editorial Board Member and Reviewer at several International Journals.", "phone": "9.6475E+12", "email": "hazhar.abubaker@su.edu.krd", "image": "/Hazhar.jpg" ,"img":"/Hazhar_.jpg" },
+        { "id": "chan-vicheth", "name": "Chan Vicheth", "role": "Country Director", "country": "Cambodia", "bio": "I am CHAN Vicheth, born on 1 January 1969 in Battambang, with present home address at House # 249, Group. 11, Sophy II, Rotanak, Battambang municipality, Battambang Province. For the past thirty-one (31) years, I have worked for ten (11) Non-Governmental Organizations from Thailand to Cambodia and I have earned various work experiences in project and program management in the fields of health, education, disability, child protection, mine action, rural development, climate change and adaptation and environmental protection and biodiversity conservation. I am married. My educational level is MBA and attended various short training courses abroad and in Cambodia mainly on project and program management. For sustainable living, my personal and professional life goal is to promote prosperity, harmony and interdependence between human and nature. I like playing Chapey (khmer Veena) in my free time.", "phone": "85512953650", "email": "vichethchan@gmail.com", "image": "/Chan.jpg" ,"img":"" },
+        { "id": "win-myint", "name": "Win Myint", "role": "Country Director", "country": "Myanmar", "bio": "", "phone": "", "email": "", "image": "/win.jpg","img":""  },
+        { "id": "prem-adheesh-lekhi", "name": "DR. PREM ADHEESH LEKHI", "role": "Country Director", "country": "Malaysia", "bio": "", "phone": "", "email": "", "image": "/Prem.jpg" ,"img":"" },
+        { "id": "shirdad-mohammadi", "name": "Shirdad Mohammadi", "role": "Country Director", "country": "Afghanistan", "bio": "", "phone": "", "email": "", "image": "/Shirdad.jpg" ,"img":"" },
+        { "id": "gnanamuthu-bosco-rajah", "name": "GNANAMUTHU BOSCO RAJAH", "role": "Country Director", "country": "Sri Lanka", "bio": "", "phone": "", "email": "", "image": "/Gnanamuthu.jpg" ,"img":"" },
+        { "id": "jenik-andreas", "name": "Jenik Andreas", "role": "Country Director", "country": "Indonesia", "bio": "", "phone": "", "email": "", "image": "/Jenik.jpg" ,"img":"" },
+        { "id": "magelyn-goze", "name": "MAGELYN G. GOZE", "role": "Country Director", "country": "Philippines", "bio": "", "phone": "", "email": "", "image": "/Magelyn.jpg" ,"img":"" },
+        { "id": "rajendra-uprety", "name": "Dr. Rajendra Uprety", "role": "Country Director", "country": "Nepal", "bio": "", "phone": "", "email": "", "image": "/Rajendra.jpg" ,"img":"" },
+        { "id": "tshering-wangchuk", "name": "Mr. Tshering Wangchuk", "role": "Country Director", "country": "Bhutan", "bio": "", "phone": "", "email": "", "image": "/Tshering.jpg" ,"img":"" },
+        { "id": "sharifur-rahman", "name": "Muhammad Sharifur Rahman", "role": "Country Director", "country": "Bangladesh", "bio": "", "phone": "", "email": "", "image": "/Muhammad.jpg" ,"img":"" }
+      ]
+    },
+    {
+      "id": "africa",
+      "name": "Africa",
+      "head": null,
+      "members": [
+        { "id": "africa-member-1", "name": "Member Name", "role": "Country Director", "country": "Country", "bio": "", "phone": "", "email": "", "image": "" }
+      ]
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "head": null,
+      "members": [
+        { "id": "australia-member-1", "name": "Member Name", "role": "Country Director", "country": "Country", "bio": "", "phone": "", "email": "", "image": "" }
+      ]
+    },
+    {
+      "id": "north-america",
+      "name": "North America",
+      "head": null,
+      "members": [
+        { "id": "na-member-1", "name": "Member Name", "role": "Country Director", "country": "Country", "bio": "", "phone": "", "email": "", "image": "" }
+      ]
+    },
+    {
+      "id": "europe",
+      "name": "Europe",
+      "head": null,
+      "members": [
+        { "id": "europe-member-1", "name": "Member Name", "role": "Country Director", "country": "Country", "bio": "", "phone": "", "email": "", "image": "" }
+      ]
+    },
+    {
+      "id": "south-america",
+      "name": "South America",
+      "head": null,
+      "members": [
+        { "id": "sa-member-1", "name": "Member Name", "role": "Country Director", "country": "Country", "bio": "", "phone": "", "email": "", "image": "" }
+      ]
+    }
+  ]
+}
