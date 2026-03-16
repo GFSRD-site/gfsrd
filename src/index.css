@@ -8,7 +8,18 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+}
 @layer base {
   :root {
     /* Primary - Forest Green */

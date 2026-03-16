@@ -9,7 +9,7 @@ interface Article {
   vision?: string;
   objectives?: string;
   conclusion?: string;
-  icon?: string; // image path
+  icon?: string;
 }
 
 interface ArticleContentProps {
@@ -19,20 +19,21 @@ interface ArticleContentProps {
 export function ArticleContent({ article }: ArticleContentProps) {
   return (
     <motion.article
+      id={article.id}   // ⭐ IMPORTANT (scroll target)
       key={article.id}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="max-w-5xl mx-auto"
+      className="max-w-5xl mx-auto scroll-mt-32"
     >
       {/* Header */}
       <div className="flex items-center gap-6 mb-6">
         {article.icon && (
-          <div className="w-16 h-16 rounded-l overflow-hidden border border-border bg-muted">
+          <div className="w-16 h-16 rounded-lg overflow-hidden border border-border bg-muted">
             <img
               src={article.icon}
               alt={article.title}
-              className="w-full h-full object-fill"
+              className="w-full h-full object-contain"
               loading="lazy"
             />
           </div>
@@ -42,20 +43,21 @@ export function ArticleContent({ article }: ArticleContentProps) {
           <span className="text-sm text-muted-foreground font-medium">
             GFSRD Academy
           </span>
-          <h1 className="font-playfair text-2xl md:text-2xl font-bold text-foreground leading-tight">
+
+          <h1 className="font-playfair text-2xl md:text-3xl font-bold text-foreground leading-tight">
             {article.title}
           </h1>
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Content */}
       <div className="prose prose-lg max-w-none">
         <div className="bg-card rounded-xl p-6 md:p-8 border border-border shadow-sm">
+
           {/* Intro */}
           <p className="text-foreground/80 leading-relaxed text-base md:text-lg">
             {article.content}
           </p>
-
 
           {/* Mission */}
           {article.mission && (
@@ -80,7 +82,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
               </p>
             </div>
           )}
-          
+
           {/* Objectives */}
           {article.objectives && (
             <div className="mt-8 pt-6 border-t border-border">
@@ -124,15 +126,18 @@ export function ArticleContent({ article }: ArticleContentProps) {
             <h2 className="font-playfair text-xl font-semibold text-foreground mb-4">
               Get Involved
             </h2>
+
             <p className="text-foreground/70 mb-4">
               Join our efforts to create sustainable change in rural communities
               worldwide. Contact us to learn more about partnership
               opportunities, research collaborations, or volunteer programs.
             </p>
+
             <button className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors">
               Contact This Centre
             </button>
           </div>
+
         </div>
       </div>
     </motion.article>

@@ -16,7 +16,7 @@ const navItems = [
   { name: "Academy", href: "/academy", isRoute: true },
   { name: "Media Coverage", href: "/media-coverage"},
   { name: "Events", href: "#events" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -83,7 +83,7 @@ export function Header() {
                       <NavigationMenuLink asChild>
                         <a
                           href={item.href}
-                          className="px-4 py-2 text-m font-medium text-[oklch(76.8%_0.233_130.85)] hover:text-white transition-colors"
+                          className="px-4 py-2 text-m font-medium text-[oklch(76.8%_0.233_130.85)] hover:text-green transition-colors"
                         >
                           {item.name}
                         </a>

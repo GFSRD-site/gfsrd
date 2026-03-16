@@ -2,10 +2,14 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Leaf, Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-rural-landscape.jpg";
+import { useNavigate } from "react-router-dom";
 
 export function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -13,6 +17,7 @@ export function HeroSection() {
           alt="Sustainable rural landscape"
           className="w-full h-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
       </div>
@@ -20,6 +25,8 @@ export function HeroSection() {
       {/* Content */}
       <div className="container relative mx-auto px-4 lg:px-8 pt-32 pb-20">
         <div className="max-w-3xl">
+
+          {/* Tag */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,6 +38,7 @@ export function HeroSection() {
             </span>
           </motion.div>
 
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,6 +49,7 @@ export function HeroSection() {
             <span className="text-accent">Sustainable</span> Rural Development
           </motion.h1>
 
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,24 +60,35 @@ export function HeroSection() {
             innovative education, and collaborative partnerships across the globe.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap gap-4"
           >
-            <Button size="lg" variant="accent" className="text-base">
-              Explore Programs
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            {/* Navigate to Global Page */}
             <Button
               size="lg"
-              variant="outline"
-              className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground text-base"
+              variant="accent"
+              className="text-base"
+              onClick={() => navigate("/global")}
             >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Our Story
+              Explore Partners
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
+
+            {/* Scroll to Video Section */}
+            <a href="#video">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground text-base"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Our Story
+              </Button>
+            </a>
           </motion.div>
 
           {/* Stats */}
@@ -79,19 +99,22 @@ export function HeroSection() {
             className="mt-16 grid grid-cols-3 gap-8 max-w-lg"
           >
             {[
-              { icon: Globe, value: "XX+", label: "Countries" },
-              { icon: Users, value: "XM+", label: "Farmers Reached" },
-              { icon: Leaf, value: "XX+", label: "Projects" },
+              { icon: Globe, value: "132", label: "Countries" },
+              { icon: Users, value: "12000+", label: "Members" },
+              { icon: Leaf, value: "103", label: "Partners" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <stat.icon className="w-6 h-6 text-accent mx-auto mb-2" />
                 <div className="text-2xl md:text-3xl font-display font-bold text-primary-foreground">
                   {stat.value}
                 </div>
-                <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+                <div className="text-sm text-primary-foreground/70">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
 
@@ -110,6 +133,7 @@ export function HeroSection() {
           <div className="w-1.5 h-3 rounded-full bg-primary-foreground/60" />
         </motion.div>
       </motion.div>
+
     </section>
   );
 }

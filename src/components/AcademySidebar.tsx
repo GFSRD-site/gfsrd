@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Article {
   id: string;
@@ -16,12 +16,37 @@ interface AcademySidebarProps {
   onSelectArticle: (id: string) => void;
 }
 
-export function AcademySidebar({ articles, activeArticleId, onSelectArticle }: AcademySidebarProps) {
+export function AcademySidebar({
+  articles,
+  activeArticleId,
+  onSelectArticle,
+}: AcademySidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // ⭐ When page loads, check URL hash and select the correct article
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash) {
+      const exists = articles.find((a) => a.id === hash);
+      if (exists) {
+        onSelectArticle(hash);
+      }
+    }
+  }, [articles, onSelectArticle]);
+
+  const handleSelect = (id: string) => {
+    onSelectArticle(id);
+
+    // ⭐ Update URL hash so it can be shared
+    window.history.replaceState(null, "", `/academy#${id}`);
+
+    setMobileOpen(false);
+  };
 
   return (
     <>
-      {/* Mobile toggle button */}
+      {/* Mobile Toggle */}
       <Button
         variant="outline"
         size="icon"
@@ -31,9 +56,9 @@ export function AcademySidebar({ articles, activeArticleId, onSelectArticle }: A
         {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       </Button>
 
-      {/* Mobile overlay */}
+      {/* Mobile Overlay */}
       {mobileOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 md:hidden"
           onClick={() => setMobileOpen(false)}
         />
@@ -46,24 +71,27 @@ export function AcademySidebar({ articles, activeArticleId, onSelectArticle }: A
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
+        {/* Header */}
         <div className="p-4 border-b border-border">
-          <h2 className="font-playfair text-xl font-bold text-foreground">GFSRD Academy</h2>
-          <p className="text-sm text-muted-foreground mt-1">Global Centres</p>
+          <h2 className="font-playfair text-xl font-bold text-foreground">
+            GFSRD Academy
+          </h2>
+          <p className="text-sm text-muted-foreground mt-1">
+            Global Centres
+          </p>
         </div>
-        
-        <ScrollArea className="h-[calc(97vh-83px)]">
+
+        {/* Navigation */}
+        <ScrollArea className="h-[calc(100vh-83px)]">
           <nav className="p-2">
             {articles.map((article) => (
               <button
                 key={article.id}
-                onClick={() => {
-                  onSelectArticle(article.id);
-                  setMobileOpen(false);
-                }}
+                onClick={() => handleSelect(article.id)}
                 className={cn(
                   "w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all duration-200 mb-2",
                   activeArticleId === article.id
-                    ? "bg-primary text-primary-foreground text-sm"
+                    ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-muted"
                 )}
               >
