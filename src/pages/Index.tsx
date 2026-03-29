@@ -8,6 +8,7 @@ import { AcademyScrollbar } from "@/components/AcedemyScrollbar";
 import { AboutSection } from "@/components/AboutSection";
 import { AchievementsSection } from "@/components/AchievementsSection";
 import { VideoSection } from "@/components/VideoSection";
+import { TeamSection } from "@/components/TeamSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -32,6 +33,7 @@ const Index = () => {
         </section>
         <AcademyScrollbar />
         <NewsSection />
+        <TeamSection/>
         <CTASection />
       </main>
       <Footer />

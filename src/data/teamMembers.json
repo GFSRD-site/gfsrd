@@ -1,0 +1,115 @@
+{
+  "categories": ["All", "Advisory Council", "Board of Directors", "Governing Body"],
+  "members": [
+    {
+      "id": "rajendra-uprety",
+      "name": "Dr. Rajendra Uprety",
+      "role": "Country Director",
+      "country": "Nepal",
+      "category": "Advisory Council",
+      "email": "upretyr66@gmail.com",
+      "phone": "+9842049858",
+      "linkedin": "#",
+      "image": ""
+    },
+    {
+      "id": "jenik-andreas",
+      "name": "Jenik DS Andreas",
+      "role": "Country Director",
+      "country": "Indonesia",
+      "category": "Advisory Council",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "magelyn-goze",
+      "name": "MAGELYN G. GOZE, PhD",
+      "role": "Country Director",
+      "country": "Philippines",
+      "category": "Advisory Council",
+      "email": "magelyngoze2021@gmail.com",
+      "phone": "+6.39561E+11",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "abena-otchere-darko",
+      "name": "Abena Agyarkowa Otchere-Darko",
+      "role": "Country Director",
+      "country": "Ghana",
+      "category": "Board of Directors",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "amina-yacouba-sido",
+      "name": "Amina Yacouba Sido",
+      "role": "Country Director",
+      "country": "Niger",
+      "category": "Board of Directors",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "orfa-ponce-berroa",
+      "name": "Orfa Ponce Berroa",
+      "role": "Country Director",
+      "country": "Peru",
+      "category": "Governing Body",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "orfa-ponce-berroa",
+      "name": "Orfa Ponce Berroa",
+      "role": "Country Director",
+      "country": "Peru",
+      "category": "Governing Body",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "orfa-ponce-berroa",
+      "name": "Orfa Ponce Berroa",
+      "role": "Country Director",
+      "country": "Peru",
+      "category": "Governing Body",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "orfa-ponce-berroa",
+      "name": "Orfa Ponce Berroa",
+      "role": "Country Director",
+      "country": "Peru",
+      "category": "Governing Body",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    },
+    {
+      "id": "orfa-ponce-berroa",
+      "name": "Orfa Ponce Berroa",
+      "role": "Country Director",
+      "country": "Peru",
+      "category": "Governing Body",
+      "email": "",
+      "phone": "",
+      "linkedin": "",
+      "image": ""
+    }
+  ]
+}

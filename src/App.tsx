@@ -10,6 +10,7 @@ import GlobalInitiative from "./pages/GlobalInitiative";
 import GlobalProfile from "./pages/GlobalPorfile";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
+import People from "./pages/People";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/media-coverage" element={<MediaCoverage />} />
           <Route path="/global" element={<GlobalInitiative />} />
           <Route path="/global/profile/:id" element={<GlobalProfile />} />
+          <Route path="/people" element={<People />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
