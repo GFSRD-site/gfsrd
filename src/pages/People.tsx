@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { User, Mail, Phone, Linkedin } from "lucide-react";
@@ -18,7 +19,7 @@ export default function People() {
       <Header />
 
       {/* Hero Banner */}
-      <section className="relative h-[250px] bg-gradient-hero flex items-center justify-center">
+      <section className="relative h-[180px] bg-gradient-hero flex items-center justify-center">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">
           People
         </h1>
@@ -53,7 +54,7 @@ export default function People() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-card rounded-xl border border-border/50 p-6 flex gap-5 items-start hover:shadow-md transition-shadow"
+              className="bg-card rounded-xl border border-border/50 p-6 flex gap-5 items-start hover:shadow-md transition-shadow cursor-pointer"
             >
               {/* Photo */}
               <div className="w-[100px] h-[100px] flex-shrink-0 rounded-lg bg-secondary flex items-center justify-center overflow-hidden">
@@ -70,9 +71,9 @@ export default function People() {
 
               {/* Info */}
               <div className="flex-1 min-w-0">
-                <h3 className="font-display text-lg font-bold text-primary">
+                <Link to={`/people/${member.id}`} className="font-display text-lg font-bold text-primary hover:underline">
                   {member.name}
-                </h3>
+                </Link>
                 <p className="text-muted-foreground text-sm mb-3">
                   {member.role}, {member.country}
                 </p>

@@ -11,7 +11,8 @@ import GlobalProfile from "./pages/GlobalPorfile";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import People from "./pages/People";
-
+import ScrollToTop from "./components/ScrollToTop";
+import TeamProfile from "./pages/TeamProfile";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop /> 
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/academy" element={<Academy />} />
@@ -28,6 +30,7 @@ const App = () => (
           <Route path="/global" element={<GlobalInitiative />} />
           <Route path="/global/profile/:id" element={<GlobalProfile />} />
           <Route path="/people" element={<People />} />
+          <Route path="/people/:id" element={<TeamProfile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
