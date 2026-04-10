@@ -5,8 +5,8 @@ import logo from "@/assets/gfsrd-logo.png";
 const footerLinks = {
   programs: [
     { name: "GFSRD Academy", href: "#" },
-    { name: "Rural Resources", href: "#" },
-    { name: "Global Initiatives", href: "#" },
+    { name: "GFSRD- India", href: "#" },
+    { name: "GFSRD- Global", href: "#" },
     { name: "SDG Localization", href: "#" },
   ],
   about: [

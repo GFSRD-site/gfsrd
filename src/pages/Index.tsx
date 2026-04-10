@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ProgramsSection } from "@/components/ProgramsSection";
-import { NewsSection } from "@/components/NewsSection";
+// import { NewsSection } from "@/components/NewsSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { AcademyScrollbar } from "@/components/AcedemyScrollbar";
@@ -9,6 +9,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { AchievementsSection } from "@/components/AchievementsSection";
 import { VideoSection } from "@/components/VideoSection";
 import { TeamSection } from "@/components/TeamSection";
+import { WorldMapSection } from "@/components/WorldMapSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -32,8 +33,9 @@ const Index = () => {
           </div>
         </section>
         <AcademyScrollbar />
-        <NewsSection />
+        {/* <NewsSection /> */}
         <TeamSection/>
+        <WorldMapSection/>
         <CTASection />
       </main>
       <Footer />

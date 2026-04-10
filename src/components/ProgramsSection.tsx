@@ -14,11 +14,19 @@ const programs = [
   },
   {
     icon: Globe,
-    title: "Global Initiatives",
+    title: "GFSRD- Global",
     description:
       "International partnerships fostering knowledge exchange and collaborative projects across continents.",
     color: "accent",
     link: "/global",
+  },
+  {
+    icon: Users,
+    title: "GFSRD- India",
+    description:
+      "Connecting communities, research, and innovation to foster sustainable growth in rural India",
+    color: "accent",
+    link: "/india",
   },
   {
     icon: Lightbulb,
@@ -27,14 +35,6 @@ const programs = [
       "Bringing UN Sustainable Development Goals to life at the grassroots level in rural communities.",
     color: "primary",
     link: "/sdg",
-  },
-  {
-    icon: Users,
-    title: "Community Networks",
-    description:
-      "Building strong connections between farmers, researchers, and policymakers worldwide.",
-    color: "accent",
-    link: "/networks",
   },
 ];
 

@@ -13,6 +13,7 @@ import AboutUs from "./pages/AboutUs";
 import People from "./pages/People";
 import ScrollToTop from "./components/ScrollToTop";
 import TeamProfile from "./pages/TeamProfile";
+import IndiaInitiative from "./pages/IndiaInitiative";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/about" element={<AboutUs />} />
           <Route path="/media-coverage" element={<MediaCoverage />} />
           <Route path="/global" element={<GlobalInitiative />} />
+          <Route path="/india" element={<IndiaInitiative/>} />
           <Route path="/global/profile/:id" element={<GlobalProfile />} />
           <Route path="/people" element={<People />} />
           <Route path="/people/:id" element={<TeamProfile />} />
