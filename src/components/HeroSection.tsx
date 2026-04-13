@@ -72,7 +72,7 @@ export function HeroSection() {
               size="lg"
               variant="accent"
               className="text-base"
-              onClick={() => navigate("/global")}
+              onClick={() => navigate("/partners")}
             >
               Explore Partners
               <ArrowRight className="w-5 h-5 ml-2" />

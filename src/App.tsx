@@ -14,6 +14,7 @@ import People from "./pages/People";
 import ScrollToTop from "./components/ScrollToTop";
 import TeamProfile from "./pages/TeamProfile";
 import IndiaInitiative from "./pages/IndiaInitiative";
+import Partners from "./pages/Partners";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/india" element={<IndiaInitiative/>} />
           <Route path="/global/profile/:id" element={<GlobalProfile />} />
           <Route path="/people" element={<People />} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/people/:id" element={<TeamProfile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
