@@ -1,33 +1,22 @@
 import { motion } from "framer-motion";
-import { Globe, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/gfsrd-logo.png";
+import { Link } from "react-router-dom";
+import { Compass, Calendar, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube, Info } from "lucide-react";
 
-const footerLinks = {
-  programs: [
-    { name: "GFSRD Academy", href: "#" },
-    { name: "GFSRD- India", href: "#" },
-    { name: "GFSRD- Global", href: "#" },
-    { name: "SDG Localization", href: "#" },
-  ],
-  about: [
-    { name: "Our Story", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Partners", href: "#" },
-    { name: "Careers", href: "#" },
-  ],
-  resources: [
-    { name: "Publications", href: "#" },
-    { name: "Research", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Glossary", href: "#" },
-  ],
-};
+const regionalHeads = [
+  { name: "Asia", href: "/global?continent=asia" },
+  { name: "Africa", href: "/global?continent=africa" },
+  { name: "Australia", href: "/global?continent=australia" },
+  { name: "Europe", href: "/global?continent=europe" },
+  { name: "North America", href: "/global?continent=north-america" },
+  { name: "South America", href: "/global?continent=south-america" },
+];
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "https://facebook.com/gfsrd", label: "Facebook" },
+  { icon: Twitter, href: "https://twitter.com/gfsrd", label: "Twitter" },
+  { icon: Linkedin, href: "https://linkedin.com/company/gfsrd", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/gfsrd", label: "Instagram" },
+  { icon: Youtube, href: "https://youtube.com/@gfsrd", label: "YouTube" },
 ];
 
 export function Footer() {
@@ -35,111 +24,100 @@ export function Footer() {
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer */}
-        <div className="py-16 lg:py-20 grid md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-6"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <img
-                src={logo}
-                alt="GFSRD Logo"
-                className="w-full h-full object-cover"
-              />
-              </div>
-              <div>
-                <span className="font-display text-lg font-semibold">GFSRD</span>
-                <span className="block text-xs text-primary-foreground/70">
-                  Global Forum for Sustainable Rural Development
-                </span>
-              </div>
-            </motion.div>
-            <p className="text-primary-foreground/70 mb-6 max-w-md">
-              Empowering rural communities worldwide through sustainable
-              agriculture, education, and collaborative partnerships since 2005.
-            </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <a
-                href="mailto:info@gfsrd.org"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                info@gfsrd.org
-              </a>
-              <a
-                href="tel:+41227889900"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                +41 22 788 99 00
-              </a>
-              <div className="flex items-center gap-3 text-primary-foreground/70">
-                <MapPin className="w-5 h-5" />
-                Geneva, Switzerland
-              </div>
+        <div className="py-16 lg:py-10 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* About */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-2 mb-5">
+              {/* <Info className="w-5 h-5 text-accent" /> */}
+              <h4 className="font-display font-semibold tracking-wide uppercase text-sm">
+                About GFSRD
+              </h4>
             </div>
-          </div>
+            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+              GFSRD is registered as Not-For-Profit Company under Section 8/15
+              under Ministry of Corporate Affairs, Government of India. GFSRD is
+              also ISO 9001: 2015 certified Not-For-Profit Company with a
+              mission to create a platform to bring and link Rural Development
+              Research, Policies and Practices in one umbrella and advocate for
+              Sustainable Rural Development globally.
+            </p>
+          </motion.div>
 
-          {/* Links Columns */}
+          {/* Regional Heads */}
           <div>
-            <h4 className="font-display font-semibold mb-4">Programs</h4>
-            <ul className="space-y-3">
-              {footerLinks.programs.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
+            <div className="flex items-center gap-2 mb-5">
+              <Compass className="w-5 h-5 text-accent" />
+              <h4 className="font-display font-semibold tracking-wide uppercase text-sm">
+                Regional Heads
+              </h4>
+            </div>
+            <ul className="divide-y divide-primary-foreground/10">
+              {regionalHeads.map((r) => (
+                <li key={r.name}>
+                  <Link
+                    to={r.href}
+                    className="block py-2 text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                   >
-                    {link.name}
-                  </a>
+                    {r.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Upcoming Events */}
           <div>
-            <h4 className="font-display font-semibold mb-4">About</h4>
-            <ul className="space-y-3">
-              {footerLinks.about.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-2 mb-5">
+              <Calendar className="w-5 h-5 text-accent" />
+              <h4 className="font-display font-semibold tracking-wide uppercase text-sm">
+                Upcoming Events
+              </h4>
+            </div>
+            <p className="text-primary-foreground/70 text-sm">There are no events</p>
           </div>
 
+          {/* Quick Contact */}
           <div>
-            <h4 className="font-display font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-2 mb-5">
+              <Mail className="w-5 h-5 text-accent" />
+              <h4 className="font-display font-semibold tracking-wide uppercase text-sm">
+                Quick Contact
+              </h4>
+            </div>
+            <address className="not-italic text-primary-foreground/70 text-sm leading-relaxed">
+              Vill + P.O – Bahiri<br />
+              P.S – Bolpur, Dist – Birbhum<br />
+              West Bengal, India<br />
+              PIN – 731240
+            </address>
+            <div className="mt-4 space-y-1 text-sm">
+              <p className="text-primary-foreground/70">
+                <span className="font-semibold text-primary-foreground">Phone:</span>{" "}
+                <a href="tel:+91943123886" className="hover:text-accent transition-colors">
+                  (91) 943123886
+                </a>
+              </p>
+              <p className="text-primary-foreground/70">
+                <span className="font-semibold text-primary-foreground">Email:</span>{" "}
+                <a
+                  href="mailto:gfsrd.international@gmail.com"
+                  className="hover:text-accent transition-colors break-all"
+                >
+                  gfsrd.international@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-primary-foreground/50">
-            © 2026 Global Forum for Sustainable Rural Development. All rights reserved.
+            © 2026 Global Forum for Sustainable Rural Development. All rights reserved | Managed By GFSRD International
           </p>
 
           {/* Social Links */}

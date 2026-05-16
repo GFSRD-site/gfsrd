@@ -1,16 +1,29 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Globe, MapPin, Mail, User, ChevronRight, Users } from "lucide-react";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Globe, MapPin, Mail, User, ChevronRight, Users, ArrowLeft } from "lucide-react";
 import globalData from "@/data/globalInitiative.json";
 
 const continents = globalData.continents;
 
 export default function GlobalInitiative() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initial = continents.find((c) => c.id === searchParams.get("continent"))?.id ?? continents[0].id;
   const [activeContinent, setActiveContinent] = useState(continents[0].id);
   const current = continents.find((c) => c.id === activeContinent)!;
+useEffect(() => {
+    const param = searchParams.get("continent");
+    if (param && continents.find((c) => c.id === param) && param !== activeContinent) {
+      setActiveContinent(param);
+    }
+  }, [searchParams]);
 
+  const handleSelect = (id: string) => {
+    setActiveContinent(id);
+    setSearchParams({ continent: id });
+  };
   return (
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center bg-gradient-hero/90 backdrop-blur-md justify-between px-4 md:px-6 py-3 border-b border-white/10">
